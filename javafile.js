@@ -1,11 +1,8 @@
+var test = {"x": "Long test", "y": 456};
 
-var y = 0;
+var mijnjson = JSON.stringify(test);
+
 function Draw() {
-    if (y < 500) {
-        postMessage(y);
-        y += 10;
-        setTimeout("Draw()", 500);
-
-    }
+    postMessage(mijnjson);
 }
 Draw();
